@@ -38,13 +38,14 @@ body{
     text-align: center;
     align-items: center;
     border: 1px solid gray;
+    //flex-shrink: 0;
     .logo{
         width: 15%;
     }
 }
 
 .content{
-    width: 45%;
+    width: 50%;
     margin: auto;
     padding-top: 30px;
     display: flex;
@@ -52,30 +53,40 @@ body{
     justify-content: center;
     //text-align: center;
     //align-items: center;
+    //flex-grow: 1;
+    //flex-shrink: 0;
     .form-title{
         color: #707070;
         font-size: 18px;
         font-weight: bold;
-        margin-bottom: 25px;
     }
     form{
         //display: flex;
         //width: 70%;
         //justify-content: space-around;
-        .dupla{
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            .form-container{
+        .input-wrapper{
+            width: 90%;
+            .dupla{
                 display: flex;
-                flex-direction: column;
-                width: 45%;
-                .input-title{
-                    font-size: 14px;
-                    font-weight: bold;
-                    color: #2A3554;
-                    margin-top: 30px;
-                    margin-bottom: 10px;
+                justify-content: space-between;
+                //width: 100%;
+                .form-container{
+                    display: flex;
+                    flex-direction: column;
+                    width: 45%;
+                    .input-title{
+                        font-size: 14px;
+                        font-weight: bold;
+                        color: #2A3554;
+                        margin-top: 30px;
+                        margin-bottom: 10px;
+                    }
+                    input{
+                        padding: 4px 0px;
+                        font-style: italic;
+                        background-color: #F0F0F7;
+                        border-bottom: 1px solid #707070;
+                    }
                 }
             }
         }
@@ -94,12 +105,45 @@ body{
         .agreement-wrapper{
             .agreement{
                 color: #707070;
-                font-size: 12px;
-                font-weight: bold;
+                font-size: 13px;
                 padding-top: 45px;
-                padding-bottom: 15px;
+                //padding-bottom: 15px;
+                .legal-link{
+                    color: #0A92EF;
+                }
+            }
+        }
+        .btn-wrapper{
+            margin-top: 25px;
+            margin-bottom: 65px;
+            .register-btn{
+                background-color: #30CF94;
+                color: #F0F0F7;
+                font-size: 13.5px;
+                padding: 9px 110px;
+                border-radius: 5px;
+                margin-top: 10px;
             }
         }
     }
 }
+
+.footer{
+    background-color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    .footer-text{
+        color: #A3A6B4;
+        font-size: 12px;
+    }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #707070;
+    background-color: #F0F0F7;
+  }
 
