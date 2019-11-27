@@ -11,13 +11,13 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="sass/materialize.css"  media="screen,projection"/>
 
     <title>Registro</title>
 </head>
 <body>
     <header class="logo-wrapper">
-        <img class="logo" src="images/logo-iol.svg">
+        <a href="https://www.invertironline.com/"><img class="logo" src="images/logo-iol.svg"></a>
     </header>
     <section class="content">
         <h1 class="form-title">¡Comencemos el registro!</h1>
@@ -77,9 +77,13 @@
             <div class="agreement-wrapper">
                 <p class="agreement">Al registrarme acepto haber leído y estar de acuerdo con las <a class="legal-link" href="https://wwww.invertironline.com">condiciones de uso</a> y <a class="legal-link" href="https://wwww.invertironline.com">la política de privacidad</a></p>
             </div>
-            <div class="btn-wrapper">
-                <a class="register-btn" href="registration-done.html">Registrarme</a>
-            </div>
+            <form>
+                <div class="btn-wrapper">
+                    <!--<a class="register-btn" href="registration-done.html">Registrarme</a>-->
+                    <button class="register-btn" type="submit" formaction="registration-done.html">Registrarme</button>
+                </div>
+            </form>
+            
         </form>
     </section>
     <footer class="footer">
