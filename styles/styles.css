@@ -77,13 +77,31 @@ html {
       justify-content: space-around;
 }
 
+@media only screen and (max-width: 1080px) {
+  .content {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .content {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .content {
+    width: 90%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .content .form-title {
   color: #707070;
   font-size: 18px;
   font-weight: bold;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
 }
 
 .content .mui-form {
@@ -97,6 +115,15 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media only screen and (max-width: 320px) {
+  .content .mui-form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 
 .content .mui-form .input-wrapper {
@@ -122,6 +149,19 @@ html {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 320px) {
+  .content .mui-form .input-wrapper .dupla {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
 .content .mui-form .input-wrapper .dupla .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,6 +171,12 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 45%;
+}
+
+@media only screen and (max-width: 320px) {
+  .content .mui-form .input-wrapper .dupla .form-container {
+    width: 90%;
+  }
 }
 
 .content .mui-form .input-wrapper .dupla .form-container .input-title {
@@ -146,7 +192,16 @@ html {
   height: 25px;
 }
 
-.content .mui-form .form-container {
+@media only screen and (max-width: 320px) {
+  .content .mui-form .phones {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+}
+
+.content .mui-form .phones .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,13 +209,35 @@ html {
   margin: 0px;
 }
 
-.content .mui-form .form-container .input-title {
+@media only screen and (max-width: 320px) {
+  .content .mui-form .phones .form-container {
+    width: 90%;
+  }
+}
+
+.content .mui-form .phones .form-container .input-field .input-title {
   font-size: 16.5px;
   font-weight: bold;
   color: #2A3554;
 }
 
-.content .mui-form .form-container .phone1 {
+@media only screen and (max-width: 320px) {
+  .content .mui-form .phones .form-container .input-field .input-title {
+    margin-left: 13px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.content .mui-form .phones .form-container .input-field .phone1 {
   font-style: italic;
   font-size: 13.5px;
   margin-top: 8px;
@@ -168,7 +245,7 @@ html {
   width: 30%;
 }
 
-.content .mui-form .form-container .phone2 {
+.content .mui-form .phones .form-container .input-field .phone2 {
   font-style: italic;
   font-size: 13.5px;
   margin-top: 8px;
@@ -183,6 +260,12 @@ html {
   padding-top: 40px;
 }
 
+@media only screen and (max-width: 320px) {
+  .content .mui-form .agreement-wrapper .agreement {
+    padding-top: 10px;
+  }
+}
+
 .content .mui-form .agreement-wrapper .agreement .legal-link {
   color: #0A92EF;
 }
@@ -194,6 +277,12 @@ html {
 .content .mui-form .btn-wrapper {
   margin-top: 25px;
   margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 320px) {
+  .content .mui-form .btn-wrapper {
+    margin-top: 15px;
+  }
 }
 
 .content .mui-form .btn-wrapper .register-btn {
@@ -229,9 +318,21 @@ html {
   bottom: 0px;
 }
 
+@media only screen and (max-width: 320px) {
+  .footer {
+    position: relative;
+  }
+}
+
 .footer .footer-text {
   color: #A3A6B4;
   font-size: 12px;
+}
+
+@media only screen and (max-width: 320px) {
+  .footer .footer-text {
+    font-size: 11px;
+  }
 }
 
 .principal-content {

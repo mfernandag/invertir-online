@@ -1,3 +1,9 @@
+$mobile: 320px;
+$tablet: 830px;
+$first: 1080px;
+
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -65,16 +71,33 @@ html{
     flex-direction: column;
     justify-content: space-around;
     //align-items: center;
+    
+    @media only screen and (max-width: $first){
+        width: 65%;
+        //align-items: center;
+    }
+    @media only screen and (max-width: $tablet){
+        width: 85%;
+        //align-items: center;
+    }
+    @media only screen and (max-width: $mobile){
+        width: 90%;
+        align-items: center;
+    }
     .form-title{
         color: #707070;
         font-size: 18px;
         font-weight: bold;
-        justify-content: flex-start;
+        //justify-content: flex-start;
     }
     .mui-form{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        @media only screen and (max-width: $mobile){
+            align-items: center;
+            text-align: center;
+        }
         .input-wrapper{
             width: 100%;
             display: flex;
@@ -83,10 +106,18 @@ html{
             .dupla{
                 display: flex;
                 justify-content: space-between;
+                @media only screen and (max-width: $mobile){
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
                 .form-container{
                     display: flex;
                     flex-direction: column;
                     width: 45%;
+                    @media only screen and (max-width: $mobile){
+                        width: 90%;
+                    }
                     .input-title{
                         font-size: 16.5px;
                         font-weight: bold;
@@ -103,31 +134,59 @@ html{
                 }
             }
         }
-        .form-container{
-            display: flex;
-            //flex-direction: column;
-            width:50%;
-            margin: 0px;
-            .input-title{
-                font-size: 16.5px;
-                font-weight: bold;
-                color: #2A3554;
-                //margin-bottom: 10px;
+        .phones{
+            @media only screen and (max-width: $mobile){
+                align-items: center;
+                text-align: center;
             }
-            .phone1{
-                font-style: italic;
-                font-size: 13.5px;
-                margin-top: 8px;
-                height: 25px;
-                width: 30%;
-            }
-            .phone2{
-                font-style: italic;
-                font-size: 13.5px;
-                margin-top: 8px;
-                height: 25px;
-                width: 55%;
-                margin-left: 15px;
+            .form-container{
+                display: flex;
+                //flex-direction: column;
+                width:50%;
+                margin: 0px;
+                @media only screen and (max-width: $mobile){
+                    width: 90%;
+                    //justify-content: center;
+                    //margin: auto;
+                }
+                .input-field{
+                    @media only screen and (max-width: $mobile){
+                        //margin-left: 60px;
+                        //display: flex;
+                        //justify-content: center;
+                        //text-align: center;
+                        //align-items: flex-start;
+                        //margin: 0;
+                    }
+                    .input-title{
+                        font-size: 16.5px;
+                        font-weight: bold;
+                        color: #2A3554;
+                        //margin-bottom: 10px;
+                        @media only screen and (max-width: $mobile){
+                            margin-left: 13px;
+                            display: flex;
+                            justify-content: center;
+                            text-align: center;
+                            align-items: flex-start;
+                        }
+                    }
+                    .phone1{
+                        font-style: italic;
+                        font-size: 13.5px;
+                        margin-top: 8px;
+                        height: 25px;
+                        width: 30%;
+                    }
+                    .phone2{
+                        font-style: italic;
+                        font-size: 13.5px;
+                        margin-top: 8px;
+                        height: 25px;
+                        width: 55%;
+                        margin-left: 15px;
+                    }
+                }
             }
         }
         .agreement-wrapper{
@@ -135,7 +194,9 @@ html{
                 color: #707070;
                 font-size: 13px;
                 padding-top: 40px;
-                //padding-bottom: 15px;
+                @media only screen and (max-width: $mobile){
+                    padding-top: 10px;
+                }
                 .legal-link{
                     color: #0A92EF;
                     &:hover{
@@ -147,6 +208,9 @@ html{
         .btn-wrapper{
             margin-top: 25px;
             margin-bottom: 50px;
+            @media only screen and (max-width: $mobile){
+                margin-top: 15px;
+            }
             .register-btn{
                 background-color: #30CF94;
                 color: #F0F0F7;
@@ -174,9 +238,15 @@ html{
     align-items: center;
     position: fixed;
     bottom: 0px;
+    @media only screen and (max-width: $mobile){
+        position: relative;
+    }
     .footer-text{
         color: #A3A6B4;
         font-size: 12px;
+        @media only screen and (max-width: $mobile){
+            font-size: 11px;
+        }
     }
 }
 
