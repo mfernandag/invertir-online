@@ -1,8 +1,69 @@
+//breakpoints
+$small: 300px;
 $mobile: 320px;
+$middle: 620px;
 $tablet: 830px;
 $first: 1080px;
 
+//colors
+$color-primary: #30CF94;
+$color-primary-dark: #009d66;
+$color-txt: #707070;
+$color-txt-medium: #A3A6B4;
+$color-gray-light: #F0F0F7;
+$color-txt-title: #2A3554;
+$color-txt-link: #0A92EF;
 
+@mixin to-center-all{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin html-body-values{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin center-ver-hor{
+    align-items: center;
+    text-align: center;
+}
+
+@mixin input-props{
+    font-style: italic;
+    font-size: 13.5px;
+    margin-top: 8px;
+    height: 25px;
+    @media only screen and (max-width: $small){
+        font-size: 12px;
+    }
+}
+
+@mixin green-btn{
+    background-color: $color-primary;
+    color: $color-gray-light;
+    font-size: 13.5px;
+    padding: 9px 110px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background-color: $color-primary-dark;
+    }
+    @media only screen and (max-width: $mobile){
+        padding: 9px 85px;
+    }
+}
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -32,34 +93,21 @@ time, mark, audio, video {
 
 body{
     font-family: 'Noto Sans', sans-serif;
-    background-color: #F0F0F7;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
+    background-color: $color-gray-light;
+    @include html-body-values();
 }
 
 html{
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden;
+    @include html-body-values();
 }
 
 .logo-wrapper{
     width: 100%;
     height: 46px;
     background-color: white;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
+    @include to-center-all();
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
-    //flex-shrink: 0;
     .logo{
-        //width: 15%;
         width: 168px;
     }
 }
@@ -67,104 +115,75 @@ html{
 .content{
     width: 50%;
     margin: auto;
-    display: flex;
-    flex-direction: column;
+    @include flex-column();
     justify-content: space-around;
-    //align-items: center;
-    
     @media only screen and (max-width: $first){
         width: 65%;
-        //align-items: center;
     }
     @media only screen and (max-width: $tablet){
         width: 85%;
-        //align-items: center;
     }
-    @media only screen and (max-width: $mobile){
+    @media only screen and (max-width: $mobile), only screen and (max-width: $middle){
         width: 90%;
         align-items: center;
     }
     .form-title{
-        color: #707070;
+        color: $color-txt;
         font-size: 18px;
         font-weight: bold;
-        //justify-content: flex-start;
     }
     .mui-form{
-        display: flex;
-        flex-direction: column;
+        @include flex-column();
         justify-content: center;
-        @media only screen and (max-width: $mobile){
-            align-items: center;
-            text-align: center;
+        @media only screen and (max-width: $mobile), only screen and (max-width: $middle){
+            @include center-ver-hor();
         }
         .input-wrapper{
             width: 100%;
-            display: flex;
-            flex-direction: column;
+            @include flex-column();
             justify-content: space-between;
             .dupla{
                 display: flex;
                 justify-content: space-between;
-                @media only screen and (max-width: $mobile){
+                @media only screen and (max-width: $mobile), only screen and (max-width: $middle){
                     flex-direction: column;
-                    align-items: center;
-                    text-align: center;
+                    @include center-ver-hor();
                 }
                 .form-container{
-                    display: flex;
-                    flex-direction: column;
+                    @include flex-column();
                     width: 45%;
-                    @media only screen and (max-width: $mobile){
-                        width: 90%;
+                    @media only screen and (max-width: $mobile), only screen and (max-width: $middle){
+                        width: 95%;
                     }
                     .input-title{
                         font-size: 16.5px;
                         font-weight: bold;
-                        color: #2A3554;
-                        //margin-top: 20px;
-                        //padding-bottom: 20px;
+                        color: $color-txt-title;
                     }
                     input{
-                        font-style: italic;
-                        font-size: 13.5px;
-                        margin-top: 8px;
-                        height: 25px;
+                        @include input-props();
                     }
                 }
             }
         }
         .phones{
             @media only screen and (max-width: $mobile){
-                align-items: center;
-                text-align: center;
+                @include center-ver-hor();
             }
             .form-container{
                 display: flex;
-                //flex-direction: column;
                 width:50%;
                 margin: 0px;
                 @media only screen and (max-width: $mobile){
-                    width: 90%;
-                    //justify-content: center;
-                    //margin: auto;
+                    width: 100%;
                 }
                 .input-field{
-                    @media only screen and (max-width: $mobile){
-                        //margin-left: 60px;
-                        //display: flex;
-                        //justify-content: center;
-                        //text-align: center;
-                        //align-items: flex-start;
-                        //margin: 0;
-                    }
                     .input-title{
                         font-size: 16.5px;
                         font-weight: bold;
-                        color: #2A3554;
-                        //margin-bottom: 10px;
-                        @media only screen and (max-width: $mobile){
-                            margin-left: 13px;
+                        color: $color-txt-title;
+                        @media only screen and (max-width: $mobile), only screen and (max-width: $middle){
+                            margin-left: 5px;
                             display: flex;
                             justify-content: center;
                             text-align: center;
@@ -172,17 +191,14 @@ html{
                         }
                     }
                     .phone1{
-                        font-style: italic;
-                        font-size: 13.5px;
-                        margin-top: 8px;
-                        height: 25px;
+                        @include input-props();
                         width: 30%;
+                        @media only screen and (max-width: $mobile), only screen and (max-width: $middle){
+                            width: 35%;
+                        }
                     }
                     .phone2{
-                        font-style: italic;
-                        font-size: 13.5px;
-                        margin-top: 8px;
-                        height: 25px;
+                        @include input-props();
                         width: 55%;
                         margin-left: 15px;
                     }
@@ -191,14 +207,14 @@ html{
         }
         .agreement-wrapper{
             .agreement{
-                color: #707070;
+                color: $color-txt;
                 font-size: 13px;
                 padding-top: 40px;
                 @media only screen and (max-width: $mobile){
                     padding-top: 10px;
                 }
                 .legal-link{
-                    color: #0A92EF;
+                    color: $color-txt-link;
                     &:hover{
                         text-decoration: underline;
                     }
@@ -212,37 +228,25 @@ html{
                 margin-top: 15px;
             }
             .register-btn{
-                background-color: #30CF94;
-                color: #F0F0F7;
-                font-size: 13.5px;
-                padding: 9px 110px;
-                border-radius: 5px;
+                @include green-btn();
                 margin-top: 10px;
-                border: none;
-                cursor: pointer;
-                &:hover{
-                    background-color: #009d66;
-                }
             }
         }
     }
 }
 
 .footer{
+    @include to-center-all();
     background-color: white;
     width: 100%;
     height: 60px;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
     position: fixed;
     bottom: 0px;
     @media only screen and (max-width: $mobile){
         position: relative;
     }
     .footer-text{
-        color: #A3A6B4;
+        color: $color-txt-medium;
         font-size: 12px;
         @media only screen and (max-width: $mobile){
             font-size: 11px;
@@ -251,21 +255,19 @@ html{
 }
 
 .principal-content{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    flex-direction: column;
+    @include flex-column();
+    @include center-ver-hor();
     height: calc(100% - 46px);
     padding-top: 5%;
     .message-wrapper{
         .msg-title{
-            color: #707070;
+            color: $color-txt;
             font-size: 18px;
             font-weight: bold;
             margin-top: 25px;
         }
         .msg-text{
-            color: #707070;
+            color: $color-txt;
             font-size: 14px;
             padding: 15px 0px 28px 0px;
             width: 80%;
@@ -274,22 +276,11 @@ html{
         }
     }
     .continue-btn{
+        @include green-btn();
         margin-top: 22px;
         margin-bottom: 50px;
-        background-color: #30CF94;
-        color: #F0F0F7;
-        font-size: 13.5px;
-        padding: 9px 110px;
-        border-radius: 5px;
-        margin-top: 10px;
-        border: none;
-        &:hover{
-            background-color: #009d66;
-        }
     }
 }
-
-
 
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
