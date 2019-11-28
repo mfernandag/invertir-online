@@ -26,11 +26,19 @@ time, mark, audio, video {
 body {
   font-family: 'Noto Sans', sans-serif;
   background-color: #F0F0F7;
+  width: 100%;
   height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 html {
+  width: 100%;
   height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 .logo-wrapper {
