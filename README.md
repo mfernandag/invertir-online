@@ -1,3 +1,3 @@
 Deploy: https://mfernandag.github.io/invertir-online/
 
-Html - Sass - Responsive design
+Html - Sass - Js - Responsive design
