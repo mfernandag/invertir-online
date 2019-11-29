@@ -41,7 +41,11 @@ time, mark, audio, video {
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 
-.logo-wrapper .logo {
+.logo-wrapper .logo-link {
+  height: 37.9px;
+}
+
+.logo-wrapper .logo-link .logo {
   width: 168px;
 }
 /*# sourceMappingURL=header.css.map */

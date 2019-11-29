@@ -1,6 +1,7 @@
 @import 'reset.scss';
 
 $mobile: 320px;
+$middle: 620px;
 $color-txt-medium: #A3A6B4;
 
 .footer{
@@ -13,7 +14,7 @@ $color-txt-medium: #A3A6B4;
     height: 60px;
     position: fixed;
     bottom: 0px;
-    @media only screen and (max-width: $mobile){
+    @media only screen and (max-width: $mobile), only screen and (max-width: $middle) {
         position: relative;
     }
     .footer-text{

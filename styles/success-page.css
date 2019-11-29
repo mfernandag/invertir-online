@@ -66,7 +66,11 @@ time, mark, audio, video {
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 
-.logo-wrapper .logo {
+.logo-wrapper .logo-link {
+  height: 37.9px;
+}
+
+.logo-wrapper .logo-link .logo {
   width: 168px;
 }
 
@@ -202,5 +206,23 @@ html {
   .principal-content .continue-btn {
     padding: 9px 85px;
   }
+}
+
+input {
+  border-top: none;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px solid #A3A6B4;
+  background-color: unset;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 1px solid red;
 }
 /*# sourceMappingURL=success-page.css.map */

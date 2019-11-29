@@ -66,7 +66,11 @@ time, mark, audio, video {
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
 }
 
-.logo-wrapper .logo {
+.logo-wrapper .logo-link {
+  height: 37.9px;
+}
+
+.logo-wrapper .logo-link .logo {
   width: 168px;
 }
 
@@ -113,7 +117,7 @@ time, mark, audio, video {
   bottom: 0px;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
   .footer {
     position: relative;
   }
@@ -151,6 +155,7 @@ html {
 .content {
   width: 50%;
   margin: auto;
+  padding-top: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -189,7 +194,7 @@ html {
   font-weight: bold;
 }
 
-.content .mui-form {
+.content .form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,18 +205,10 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 30px;
 }
 
-@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
-  .content .mui-form {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-  }
-}
-
-.content .mui-form .input-wrapper {
+.content .form .input-wrapper {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -225,29 +222,28 @@ html {
           justify-content: space-between;
 }
 
-.content .mui-form .input-wrapper .dupla {
+.content .form .input-wrapper .dupla {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 320px), only screen and (max-width: 620px) {
-  .content .mui-form .input-wrapper .dupla {
+  .content .form .input-wrapper .dupla {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
+    margin: 0px;
+    width: 100%;
   }
 }
 
-.content .mui-form .input-wrapper .dupla .form-container {
+.content .form .input-wrapper .dupla .form-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,32 +255,196 @@ html {
 }
 
 @media only screen and (max-width: 320px), only screen and (max-width: 620px) {
-  .content .mui-form .input-wrapper .dupla .form-container {
-    width: 95%;
+  .content .form .input-wrapper .dupla .form-container {
+    width: 100%;
+    margin-bottom: 15px;
   }
 }
 
-.content .mui-form .input-wrapper .dupla .form-container .input-title {
+.content .form .input-wrapper .dupla .form-container .input-title {
   font-size: 16.5px;
   font-weight: bold;
   color: #2A3554;
 }
 
-.content .mui-form .input-wrapper .dupla .form-container input {
+.content .form .input-wrapper .dupla .form-container input {
   font-style: italic;
   font-size: 13.5px;
   margin-top: 8px;
   height: 25px;
+  border-top: none;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px solid #A3A6B4;
+  background-color: unset;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+}
+
+.content .form .input-wrapper .dupla .form-container input:focus {
+  outline: none;
+  border-bottom: 1px solid #0A92EF;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
+  .content .form .input-wrapper .dupla .form-container input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 }
 
 @media only screen and (max-width: 300px) {
-  .content .mui-form .input-wrapper .dupla .form-container input {
+  .content .form .input-wrapper .dupla .form-container input {
     font-size: 12px;
   }
 }
 
+.content .form .phones .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  margin-bottom: 15px;
+}
+
 @media only screen and (max-width: 320px) {
-  .content .mui-form .phones {
+  .content .form .phones .form-container {
+    width: 100%;
+  }
+}
+
+.content .form .phones .form-container .input-title {
+  font-size: 16.5px;
+  font-weight: bold;
+  color: #2A3554;
+}
+
+.content .form .phones .form-container .phones-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.content .form .phones .form-container .phones-input .phone1 {
+  font-style: italic;
+  font-size: 13.5px;
+  margin-top: 8px;
+  height: 25px;
+  border-top: none;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px solid #A3A6B4;
+  background-color: unset;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  width: 25%;
+}
+
+.content .form .phones .form-container .phones-input .phone1:focus {
+  outline: none;
+  border-bottom: 1px solid #0A92EF;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
+  .content .form .phones .form-container .phones-input .phone1 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .content .form .phones .form-container .phones-input .phone1 {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
+  .content .form .phones .form-container .phones-input .phone1 {
+    width: 35%;
+  }
+}
+
+.content .form .phones .form-container .phones-input .phone2 {
+  font-style: italic;
+  font-size: 13.5px;
+  margin-top: 8px;
+  height: 25px;
+  border-top: none;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px solid #A3A6B4;
+  background-color: unset;
+  -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
+  width: 40%;
+  margin-left: 15px;
+}
+
+.content .form .phones .form-container .phones-input .phone2:focus {
+  outline: none;
+  border-bottom: 1px solid #0A92EF;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
+  .content .form .phones .form-container .phones-input .phone2 {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .content .form .phones .form-container .phones-input .phone2 {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
+  .content .form .phones .form-container .phones-input .phone2 {
+    width: 48%;
+  }
+}
+
+.content .form .agreement-wrapper .agreement {
+  color: #707070;
+  font-size: 13px;
+  padding-top: 40px;
+}
+
+@media only screen and (max-width: 320px) {
+  .content .form .agreement-wrapper .agreement {
+    padding-top: 10px;
+  }
+}
+
+.content .form .agreement-wrapper .agreement .legal-link {
+  color: #0A92EF;
+}
+
+.content .form .agreement-wrapper .agreement .legal-link:hover {
+  text-decoration: underline;
+}
+
+.content .form .btn-wrapper {
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 320px) {
+  .content .form .btn-wrapper {
+    margin-top: 15px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -292,109 +452,7 @@ html {
   }
 }
 
-.content .mui-form .phones .form-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 50%;
-  margin: 0px;
-}
-
-@media only screen and (max-width: 320px) {
-  .content .mui-form .phones .form-container {
-    width: 100%;
-  }
-}
-
-.content .mui-form .phones .form-container .input-field .input-title {
-  font-size: 16.5px;
-  font-weight: bold;
-  color: #2A3554;
-}
-
-@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
-  .content .mui-form .phones .form-container .input-field .input-title {
-    margin-left: 5px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-.content .mui-form .phones .form-container .input-field .phone1 {
-  font-style: italic;
-  font-size: 13.5px;
-  margin-top: 8px;
-  height: 25px;
-  width: 30%;
-}
-
-@media only screen and (max-width: 300px) {
-  .content .mui-form .phones .form-container .input-field .phone1 {
-    font-size: 12px;
-  }
-}
-
-@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
-  .content .mui-form .phones .form-container .input-field .phone1 {
-    width: 35%;
-  }
-}
-
-.content .mui-form .phones .form-container .input-field .phone2 {
-  font-style: italic;
-  font-size: 13.5px;
-  margin-top: 8px;
-  height: 25px;
-  width: 55%;
-  margin-left: 15px;
-}
-
-@media only screen and (max-width: 300px) {
-  .content .mui-form .phones .form-container .input-field .phone2 {
-    font-size: 12px;
-  }
-}
-
-.content .mui-form .agreement-wrapper .agreement {
-  color: #707070;
-  font-size: 13px;
-  padding-top: 40px;
-}
-
-@media only screen and (max-width: 320px) {
-  .content .mui-form .agreement-wrapper .agreement {
-    padding-top: 10px;
-  }
-}
-
-.content .mui-form .agreement-wrapper .agreement .legal-link {
-  color: #0A92EF;
-}
-
-.content .mui-form .agreement-wrapper .agreement .legal-link:hover {
-  text-decoration: underline;
-}
-
-.content .mui-form .btn-wrapper {
-  margin-top: 25px;
-  margin-bottom: 50px;
-}
-
-@media only screen and (max-width: 320px) {
-  .content .mui-form .btn-wrapper {
-    margin-top: 15px;
-  }
-}
-
-.content .mui-form .btn-wrapper .register-btn {
+.content .form .btn-wrapper .register-btn {
   background-color: #30CF94;
   color: #F0F0F7;
   font-size: 13.5px;
@@ -405,12 +463,12 @@ html {
   margin-top: 10px;
 }
 
-.content .mui-form .btn-wrapper .register-btn:hover {
+.content .form .btn-wrapper .register-btn:hover {
   background-color: #009d66;
 }
 
 @media only screen and (max-width: 320px) {
-  .content .mui-form .btn-wrapper .register-btn {
+  .content .form .btn-wrapper .register-btn {
     padding: 9px 85px;
   }
 }
