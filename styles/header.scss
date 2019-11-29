@@ -1,0 +1,15 @@
+@import 'reset.scss';
+
+.logo-wrapper{
+    width: 100%;
+    height: 46px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+    .logo{
+        width: 168px;
+    }
+}
