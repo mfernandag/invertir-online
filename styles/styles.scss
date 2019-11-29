@@ -204,7 +204,7 @@ html{
         .btn-wrapper{
             margin-top: 25px;
             margin-bottom: 50px;
-            @media only screen and (max-width: $mobile){
+            @media only screen and (max-width: $mobile), only screen and (max-width: $middle){
                 margin-top: 15px;
                 @include center-ver-hor();
             }

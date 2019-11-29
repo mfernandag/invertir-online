@@ -117,7 +117,7 @@ time, mark, audio, video {
   bottom: 0px;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
   .footer {
     position: relative;
   }
@@ -166,6 +166,12 @@ html {
   text-align: center;
   height: calc(100% - 46px);
   padding-top: 5%;
+}
+
+@media only screen and (max-width: 320px), only screen and (max-width: 620px), only screen and (max-width: 830px) {
+  .principal-content {
+    padding-top: 10%;
+  }
 }
 
 .principal-content .message-wrapper .msg-title {

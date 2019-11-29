@@ -42,6 +42,8 @@ $color-primary: #30CF94;
 $color-primary-dark: #009d66;
 
 $mobile: 320px;
+$middle: 620px;
+$tablet: 830px;
 
 body{
     font-family: 'Noto Sans', sans-serif;
@@ -58,6 +60,9 @@ html{
     @include center-ver-hor();
     height: calc(100% - 46px);
     padding-top: 5%;
+    @media only screen and (max-width: $mobile), only screen and (max-width: $middle), only screen and (max-width: $tablet){
+        padding-top: 10%;
+    }
     .message-wrapper{
         .msg-title{
             color: $color-txt;

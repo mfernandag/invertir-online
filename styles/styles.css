@@ -442,7 +442,7 @@ html {
   margin-bottom: 50px;
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 320px), only screen and (max-width: 620px) {
   .content .form .btn-wrapper {
     margin-top: 15px;
     -webkit-box-align: center;
