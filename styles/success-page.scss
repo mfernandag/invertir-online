@@ -85,17 +85,3 @@ html{
         margin-bottom: 50px;
     }
 }
-
-input{
-    border-top: none;
-    border-right: none;
-    border-top: none;
-    border-left: none;
-    border-bottom: 1px solid #A3A6B4;
-    background-color: unset;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    &:focus{
-        outline: none;
-        border-bottom: 1px solid red;
-    }
-}

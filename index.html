@@ -7,6 +7,7 @@
     <link href="styles/styles.css" rel="stylesheet" type="text/css" media="screen">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel='icon' href="images/favicon.ico" type="image/x-icon">
+    <script src="js/main.js" type="text/javascript"></script>
     <title>Registro</title>
 </head>
 <body>
@@ -15,52 +16,47 @@
     </header>
     <section class="content">
         <h1 class="form-title">¡Comencemos el registro!</h1>
-        <form class="form">
+        <form class="form" id="myForm" method="POST" action="...">
             <div class="input-wrapper">
                 <div class="dupla">
                     <div class="form-container">
                         <label class="input-title">Nombre</label>
-                        <input type="text" name="name" placeholder="Ingresá tu nombre como figura en el DNI" maxlength="40" required>                        
+                        <input type="text" name="name" title="Ingresá tu nombre" placeholder="Ingresá tu nombre como figura en el DNI" onkeypress="return (event.charCode > 64 && 
+                        event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" maxlength="40" required>                        
                     </div>
                     <div class="form-container">
                         <label class="input-title">Apellido</label>
-                        <input type="text" name="surname" placeholder="Ingresá tu apellido como figura en el DNI" maxlength="30" required>
+                        <input type="text" name="surname" title="Ingresá tu apellido" placeholder="Ingresá tu apellido como figura en el DNI" onkeypress="return (event.charCode > 64 && 
+                        event.charCode < 91) || (event.charCode > 96 && event.charCode < 123)" maxlength="30" required>
                     </div>
                 </div>
                 <div class="dupla">
                     <div class="form-container">
-                            <label class="input-title">Email</label>
-                            <input type="email" name="email" placeholder="minombre@ejemplo.com" required>
+                        <label class="input-title">Email</label>
+                        <input type="email" name="email1" title="Ingresá tu dirección de email" placeholder="minombre@ejemplo.com" required>
                     </div>
                     <div class="form-container">
-                        
-                            <label class="input-title">Confirmar Email</label>
-                            <input type="email" name="email" placeholder="minombre@ejemplo.com" required>
-                        
+                        <label class="input-title">Confirmar Email</label>
+                        <input type="email" name="email2" title="Confirmá tu dirección de email" placeholder="minombre@ejemplo.com" required>
                     </div>
                 </div>
                 <div class="phones">
                     <div class="form-container">
                         <label class="input-title">Celular</label>
                         <div class="phones-input">
-                            <input class="phone1" type="number" name="phoneShort" placeholder="ej: 00000000">
-                            <input class="phone2" type="number" name="phoneNum" placeholder="ej: 00000000" required>
+                            <input class="phone1" title="Ingresá un código de área" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="4" name="phoneShort" placeholder="ej: 00000000">
+                            <input class="phone2" title="Ingresá su número de teléfono" type="number" oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="15" name="phoneNum" placeholder="ej: 00000000" required>
                         </div>
                     </div> 
                 </div>
-                   
                 <div class="dupla">
                     <div class="form-container">
-                        
-                            <label class="input-title">Contraseña</label>
-                            <input type="password" name="password" placeholder="******" required>
-                        
+                        <label class="input-title">Contraseña</label>
+                        <input type="password" id="pass1" name="pass_1" title="La contraseña debe tener al menos 6 caracteres, una mayúscula y un número" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder="******" required>
                     </div>
                     <div class="form-container">
-                        
-                            <label class="input-title">Repetí tu contraseña</label>
-                            <input type="password" name="confirmPassword" placeholder="******" required>
-                        
+                        <label class="input-title">Repetí tu contraseña</label>
+                        <input type="password" id="pass2" name="pass_2" title="Volvé a ingresar la contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder="******" required>
                     </div>
                 </div>
             </div>
@@ -78,6 +74,5 @@
     <footer class="footer">
         <p class="footer-text">© Copyright 2019 invertirOnline.com - San Martín 232, piso 11, CABA, Argentina. Tel. 0810-1222-465</p>
     </footer>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
